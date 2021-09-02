@@ -1,0 +1,107 @@
+h1 {
+    font-size: 32px;
+    font-family: 'Maven Pro', sans-serif;
+    font-weight: 400;
+    text-align: center;
+
+    color: var( --accent-color );
+    background-color: white;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+
+    padding: 1vh 1vw;
+    box-sizing: border-box;
+
+}
+
+#successMessage {
+    color: var( --accent-color );
+    font-weight: 400;
+}
+
+form {
+    width: 20vw;
+    min-width: 400px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.16);
+
+    transform: translateX( -50% );
+}
+
+#formContent {
+    width: 100%;
+    padding: 1vh 1vw;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+form h2 {
+    width: 100%;
+    padding: 1vh 1vw;
+    box-sizing: border-box;
+    
+    font-size: 28px;
+    font-family: 'Maven Pro', sans-serif;
+    text-align: center;
+
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.05);
+}
+
+form label {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    margin: 2vh 0 0.5vh 0;
+    color: var( --label-color );
+}
+
+form input, form textarea {
+    border: 0;
+    outline: 0;
+
+    font-family: 'Maven Pro', sans-serif;
+    font-size: 18px;
+
+    width: 100%;
+    border-bottom: 1px solid var( --border-color );
+}
+
+form textarea {
+    padding: 2%;
+    box-sizing: border-box;
+
+    border-radius: 10px;
+    border: 1px solid var( --border-color );
+}
+
+form button {
+    width: 100%;
+    border: 0;
+    outline: 0;
+
+    margin-top: 2vh;
+    padding: 1vh 1vw;
+    box-sizing: border-box;
+    text-align: center;
+
+    color: white;
+    font-family: 'Maven Pro', sans-serif;
+    font-size: 18px;
+
+    background-color: var( --accent-color );
+    border-radius: 15px;
+
+    cursor: pointer;
+}
