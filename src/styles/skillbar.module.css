@@ -1,0 +1,48 @@
+.skillContainer {
+    width: 100%;
+    margin: 1vh 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.skillContainer h4 {
+    font-family: 'Maven Pro', sans-serif;
+    font-size: 26px;
+}
+
+.skillContainer .skillBar {
+    margin-top: 0.5vh;
+
+    width: 100%;
+    height: 25px;
+
+    border: 1px solid var( --accent-color );
+    border-radius: 20px;
+    
+}
+
+.skillContainer .skillBar .skillBarFiller {
+    height: 25px;
+
+    border-radius: 20px;
+    
+}
+
+.skillContainer .skillBar .skillBarFiller .progressBar {
+    height: 25px;
+
+    animation: progressBar 3s ease-in-out;
+    animation-fill-mode:both; 
+
+    background-color: var( --accent-color );
+    border-radius: 20px;
+    
+}
+
+@keyframes progressBar {
+    0% { width: 0; }
+    100% { width: 100%; }
+  }

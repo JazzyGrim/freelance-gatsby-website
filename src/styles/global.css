@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;700&family=Poppins:wght@400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+body {
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+:root {
+    --accent-color: #116DFF;
+    --text-secondary: #2F2F2F;
+    --dark-accent: #14348E;
+    --light-accent: #08A4BD;
+    --border-color: #C9C9C9;
+    --label-color: #878787;
+}
