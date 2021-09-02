@@ -1,5 +1,5 @@
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
-Gatsby Freelance Website
+Gatsby Freelance Website Project
 
 <p align="center">
   <a href="https://www.gatsbyjs.com">
