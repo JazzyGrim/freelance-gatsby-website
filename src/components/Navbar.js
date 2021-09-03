@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "gatsby";
 import scrollTo from 'gatsby-plugin-smoothscroll';
 import * as styles from "../styles/navigation.module.css";
 

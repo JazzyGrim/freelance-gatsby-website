@@ -1,10 +1,10 @@
-import { Link } from "gatsby";
 import React from "react";
 import Layout from "../components/Layout";
 import SkillBar from "../components/SkillBar";
 import ContactForm from "../components/ContactForm";
 import "../styles/global.css";
 import * as styles from "../styles/home.module.css";
+import scrollTo from 'gatsby-plugin-smoothscroll';
 
 const skills = [
   {
@@ -54,15 +54,15 @@ export default function Home() {
     <main>
       <h1>Stigla je nova era<br/>Web Stranica</h1>
       <h2>Vrijeme je promjena. Mi smo ovdje<br/>samo za one dobre. Izradite modernu<br/>stranicu s kojom ste ponosni.</h2>
-      <Link>Krenite Odmah</Link>
-      <img id={ styles.mainImage } src="/Group9.png" />
-      <img id={ styles.imageLeft } src="/Group10.png" />
-      <img id={ styles.imageRightOne } src="/Group2.png" />
-      <img id={ styles.imageRightTwo } src="/Group3.png" />
+      <button onClick={() => scrollTo("section[name='contact']")}>Krenite Odmah</button>
+      <img alt="An apartment website designed by Mateo Sindičić." id={ styles.mainImage } src="/Group9.png" />
+      <img alt="A contact form designed by Mateo Sindičić." id={ styles.imageLeft } src="/Group10.png" />
+      <img alt="A pop-up notification designed by Mateo Sindičić." id={ styles.imageRightOne } src="/Group2.png" />
+      <img alt="A blog post card designed by Mateo Sindičić." id={ styles.imageRightTwo } src="/Group3.png" />
     </main>
     <section id={ styles.aboutSection } name="about">
       <div id={ styles.blueBox }>
-        <img src="/mateo.png" />
+        <img alt="An image of Mateo Sindičić." src="/mateo.png" />
       </div>
       <div id={ styles.content }>
         <h2>O Meni</h2>
@@ -85,9 +85,9 @@ export default function Home() {
       <div id={ styles.staticInfo }>
         <h2>Direktan upit</h2>
         <h3>email</h3>
-        <h5>mateo.sindicic@gmail.com</h5>
+        <a href="mailto:mateo.sindicic@gmail.com">mateo.sindicic@gmail.com</a>
         <h3>phone</h3>
-        <h5>+385 91 373 4442</h5>
+        <a href="tel:+38591-373-4442">+385 91 373 4442</a>
       </div>
       <div id={ styles.infoContainer }>
       <ContactForm />

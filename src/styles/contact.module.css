@@ -105,3 +105,29 @@ form button {
 
     cursor: pointer;
 }
+
+
+@media only screen and (max-width: 600px) {
+    form {
+        width: 80vw;
+        min-width: auto;
+    
+        transform: translateX( 0% );
+    }
+
+    #formContent {
+        padding: 1vh 3vw;
+    }
+    
+    form h2 {
+        padding: 1vh 1vw;
+    }
+    
+    form label {
+        font-size: 18px;
+    }
+    
+    form button {
+        border-radius: 10px;
+    }
+}
