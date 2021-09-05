@@ -65,29 +65,27 @@ main img {
 
 #imageLeft {
     position: absolute;
-    left: 22%;
+    
     bottom: 7vh;
     width: 13vw;
 
-    transform: translateX( -50% );
+    transform: translateX( -220% );
 }
 
 #imageRightOne {
     position: absolute;
-    left: 75%;
     bottom: 5vh;
     width: 20vw;
 
-    transform: translateX( -50% );
+    transform: translateX( 125% );
 }
 
 #imageRightTwo {
     position: absolute;
-    left: 80%;
     bottom: 20vh;
     width: 14vw;
 
-    transform: translateX( -50% );
+    transform: translateX( 210% );
 }
 
 #aboutSection {
@@ -115,6 +113,7 @@ main img {
 
 #aboutSection img {
     width: 30vw;
+    height: 30vw;
     
     top: 0;
     bottom: 0;
@@ -135,12 +134,34 @@ main img {
     flex-grow: 2;
 }
 
+.textCover {
+    display: block;
+    width: 100%;
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+
+    transform-origin: 100% 0;
+
+    background-color: black;
+    z-index: 5;
+}
+
+.textCoverReverse {
+    transform-origin: 0% 0;
+}
+
 #aboutSection h2, #skillsSection h2 {
+    position: relative;
     font-family: 'Maven Pro', sans-serif;
     font-size: 46px;
+
+    margin: 1vh 0;
 }
 
 #aboutSection p, #skillsSection p {
+    position: relative;
     max-width: 600px;
     font-family: 'Poppins', sans-serif;
     font-size: 22px;
@@ -156,6 +177,8 @@ main img {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    position: relative;
 
 }
 

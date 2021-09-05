@@ -5,6 +5,8 @@ import ContactForm from "../components/ContactForm";
 import "../styles/global.css";
 import * as styles from "../styles/home.module.css";
 import scrollTo from 'gatsby-plugin-smoothscroll';
+import Reveal from 'react-reveal/reveal';
+import Fade from 'react-reveal/Fade';
 
 const skills = [
   {
@@ -52,26 +54,66 @@ const skills = [
 export default function Home() {
   return <Layout>
     <main>
-      <h1>Stigla je nova era<br/>Web Stranica</h1>
-      <h2>Vrijeme je promjena. Mi smo ovdje<br/>samo za one dobre. Izradite modernu<br/>stranicu s kojom ste ponosni.</h2>
-      <button onClick={() => scrollTo("section[name='contact']")}>Krenite Odmah</button>
-      <img alt="An apartment website designed by Mateo Sindičić." id={ styles.mainImage } src="/Group9.png" />
-      <img alt="A contact form designed by Mateo Sindičić." id={ styles.imageLeft } src="/Group10.png" />
-      <img alt="A pop-up notification designed by Mateo Sindičić." id={ styles.imageRightOne } src="/Group2.png" />
-      <img alt="A blog post card designed by Mateo Sindičić." id={ styles.imageRightTwo } src="/Group3.png" />
+      <Fade bottom>
+        <h1>Stigla je nova era<br/>Web Stranica</h1>
+      </Fade>
+      <Fade bottom delay={ 1000 }>
+        <h2>Vrijeme je promjena. Mi smo ovdje<br/>samo za one dobre. Izradite modernu<br/>stranicu s kojom ste ponosni.</h2>
+      </Fade>
+      <Fade delay={ 2000 }>
+        <button onClick={() => scrollTo("section[name='contact']")}>Krenite Odmah</button>
+      </Fade>
+      <img alt="An apartment website designed by Mateo Sindičić." id={ styles.mainImage } src="/Group9-min.png" />
+      <Reveal effect="revealLeft">
+        <img alt="A contact form designed by Mateo Sindičić." id={ styles.imageLeft } src="/Group10-min.png" />
+      </Reveal>
+      <Reveal effect="revealRightOne">
+        <img alt="A pop-up notification designed by Mateo Sindičić." id={ styles.imageRightOne } src="/Group2-min.png" />
+      </Reveal>
+      <Reveal effect="revealRightTwo">
+        <img alt="A blog post card designed by Mateo Sindičić." id={ styles.imageRightTwo } src="/Group3-min.png" />
+      </Reveal>
     </main>
     <section id={ styles.aboutSection } name="about">
       <div id={ styles.blueBox }>
-        <img alt="An image of Mateo Sindičić." src="/mateo.png" />
+        <img alt="An image of Mateo Sindičić." src="/mateo-min.png" />
       </div>
       <div id={ styles.content }>
-        <h2>O Meni</h2>
-        <p>Pozdrav! Ja sam Mateo Sindičić i u slobodno vrijeme dizajniram i programiram web stranice, aplikacije te video igre. Moje prvo iskustvo s programiranjem bilo je oko moje 10. godine,  što me s vremenom dovelo ovdje. Zalažem se za minimalizam i savršenstvo, a moji projekti su izravan odraz toga.</p>
+        <h2>
+          <Reveal effect="collapseCover" delay={ 1000 }>
+            <span className={ styles.textCover } />
+          </Reveal>
+          O Meni
+        </h2>
+        <p>
+          <Reveal effect="collapseCover" delay={ 1200 }>
+            <span className={ `${ styles.textCover } ${ styles.textCoverReverse }` }/>
+          </Reveal>
+        Pozdrav! Ja sam Mateo Sindičić i u slobodno vrijeme dizajniram i programiram web stranice, aplikacije te video igre. Moje prvo iskustvo s programiranjem bilo je oko moje 10. godine,  što me s vremenom dovelo ovdje. Zalažem se za minimalizam i savršenstvo, a moji projekti su izravan odraz toga.
+        </p>
       </div>
     </section>
+    <Reveal effect="lightsOut" effectOut="lightsIn" delay={ 500 }>
     <section id={ styles.skillsSection } name="skills">
-      <h2>Moje Znanje</h2>
-      <p>Specijaliziram u tzv. Full-Stack polju. Razvijam web aplikacije ( React.JS, Gatsby ), mobilne aplikacije ( React Native - Expo / Barebones ), servere ( Node.JS, Express, SQL ), video igre ( C++, OpenGL, GLSL ), dodatke za video igre ( Java ).</p>
+    <div class="area">
+      <div class="wire"></div>
+      <div class="fixture">
+        <div class="strip"></div>
+        <div class="strip"></div>
+        <div class="strip"></div>
+      </div>
+      <div class="bulb">
+        <div class="zig"></div>
+        <div class="zig"></div>
+        <div class="zig"></div>
+      </div>
+    </div>
+      <h2>
+        Moje Znanje
+      </h2>
+      <p>
+        Specijaliziram u tzv. Full-Stack polju. Razvijam web aplikacije ( React.JS, Gatsby ), mobilne aplikacije ( React Native - Expo / Barebones ), servere ( Node.JS, Express, SQL ), video igre ( C++, OpenGL, GLSL ), dodatke za video igre ( Java ).
+      </p>
       <div id={ styles.gridView }>
         <div className={ styles.gridContainer }>
           { skills.slice( 0, 5 ).map( skill => <SkillBar name={ skill.name } percentage={ skill.percentage } /> ) }
@@ -81,6 +123,7 @@ export default function Home() {
         </div>
       </div>
     </section>
+    </Reveal>
     <section id={ styles.contactSection } name="contact">
       <div id={ styles.staticInfo }>
         <h2>Direktan upit</h2>

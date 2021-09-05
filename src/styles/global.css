@@ -19,3 +19,167 @@ body {
     --border-color: #C9C9C9;
     --label-color: #878787;
 }
+
+/* ANIMATIONS */
+@keyframes revealLeft {
+    from { transform: translateX( -150% ); opacity: 0; }
+    to { transform: translateX( -220% ); opacity: 1; }
+}
+
+.revealLeft {
+    animation-name: revealLeft;
+}
+
+@keyframes revealRightOne {
+    from { transform: translateX( 55% ); opacity: 0; }
+    to { transform: translateX( 125% ); opacity: 1; }
+}
+
+.revealRightOne {
+    animation-name: revealRightOne;
+}
+
+@keyframes revealRightTwo {
+    from { transform: translateX( 140% ); opacity: 0; }
+    to { transform: translateX( 210% ); opacity: 1; }
+}
+
+.revealRightTwo {
+    animation-name: revealRightTwo;
+}
+
+@keyframes collapseCover {
+    from { transform: scaleX( 100% ); }
+    to { transform: scaleX( 0% ); }
+}
+
+.collapseCover {
+    animation-name: collapseCover;
+    animation-timing-function: cubic-bezier(.14,.54,.6,1);
+    animation-fill-mode: forwards;
+}
+
+@keyframes lightsOut {
+    from { background-color: white; color: black; }
+    to { background-color: black; color: white; }
+}
+
+@keyframes lightsIn {
+    from { background-color: red; color: black; }
+    to { background-color: red; color: red; }
+}
+
+.lightsOut {
+    animation-name: lightsOut;
+    animation-timing-function: cubic-bezier(.14,.54,.6,1);
+    animation-fill-mode: forwards;
+}
+
+.lightsIn {
+    animation-name: lightsIn;
+    animation-timing-function: cubic-bezier(.14,.54,.6,1);
+    animation-fill-mode: forwards;
+    animation-direction: reverse;
+}
+
+.area {
+    position: absolute;
+    left: 10%;
+    top: 0;
+    transform: translateX( 0 );
+
+    width: 200px;
+    height: 500px;
+    animation: swing 1s infinite ease-in-out alternate;
+    transform-origin: top;
+    -moz-transform-origin: top;
+    -webkit-transform-origin: top;
+}
+
+.wire {
+    position: relative;
+    left: 98px;
+    height: 200px;
+    width: 4px;
+    background-color: rgba( 255, 255, 255, 0.5);
+}
+
+.fixture {
+    position: relative;
+    background-color: grey;
+    width: 16px;
+    height: 20px;
+    left: 92px;
+}
+
+.strip {
+    position: relative;
+    width: 18px;
+    height: 2px;
+    right: 1px;
+    top: 4px;
+    background-color: darkgrey;
+}
+
+.strip:nth-of-type(2) {
+    top: 7px;
+}
+
+.strip:nth-of-type(3) {
+    top: 10px;
+}
+
+.bulb {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    left: 80px;
+    bottom: 2px;
+    z-index: 2;
+    background-color: rgba(226, 211, 161, 0.85);
+    border-radius: 50%;
+    -webkit-box-shadow: 0px 0px 300px 77px rgba(235, 209, 164, 1);
+    -moz-box-shadow: 0px 0px 300px 77px rgba(235, 209, 164, 1);
+    box-shadow: 0px 0px 300px 77px rgba(235, 209, 164, 1);
+}
+
+.zig {
+    position: relative;
+    background-color: transparent;
+    width: 10px;
+    height: 5px;
+    border-radius: 5px / 2.5px;
+    left: 14px;
+    border: black solid 1px;
+}
+
+.zig:nth-of-type(2) {
+    top: -3px;
+}
+
+.zig:nth-of-type(3) {
+    top: -6px;
+}
+
+@keyframes swing {
+    from {
+        -moz-transform: rotate(3deg);
+        -webkit-transform: rotate(3deg);
+        transform: rotate(3deg);
+    }
+    to {
+        transform: rotate(-3deg);
+    }
+}
+
+@keyframes progress {
+    0% { width: 0; }
+    100% { width: 100%; }
+}
+
+.progress {
+    animation: progress;
+    animation-duration: 3s;
+    animation-timing-function: cubic-bezier( .26, .86, .6, 1 );
+    animation-fill-mode: both;
+}

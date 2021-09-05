@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import Reveal from 'react-reveal/reveal';
 import * as styles from "../styles/skillbar.module.css";
 
 export default function SkillBar( props ) {
@@ -10,7 +11,11 @@ export default function SkillBar( props ) {
         <h4>{ props.name }</h4>
         <div className={ styles.skillBar }>
         <div className={ styles.skillBarFiller } style={ { width: props.percentage } }>
-            <div className={ styles.progressBar } />
+            <Reveal effect="progress" delay={ 1000 }>
+                <div className={ styles.progressBar }>
+                    <div className={ styles.progressHead } />
+                </div>
+            </Reveal>
         </div>
         </div>
     </div>

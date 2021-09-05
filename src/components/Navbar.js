@@ -1,9 +1,21 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import scrollTo from 'gatsby-plugin-smoothscroll';
 import * as styles from "../styles/navigation.module.css";
 
 export default function Navbar( ) {
-    return <nav>
+
+    const [ navShadow, setNavShadow ] = useState( false );
+
+    useEffect( ( ) => {
+        window.addEventListener( "scroll", onScroll );
+    }, [ ] );
+
+    const onScroll = ( event ) => {
+        if ( window.scrollY > 0 ) setNavShadow( true );
+        else setNavShadow( false );
+    }
+
+    return <nav className={ navShadow ? styles.navShadow :  '' }>
         <div>
             <h3>Mateo S.</h3>
             <ul>
