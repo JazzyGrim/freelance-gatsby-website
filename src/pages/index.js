@@ -6,7 +6,7 @@ import ContactForm from "../components/ContactForm";
 import "../styles/global.css";
 import * as styles from "../styles/home.module.css";
 import scrollTo from 'gatsby-plugin-smoothscroll';
-import Reveal from 'react-reveal/reveal';
+import Reveal from 'react-reveal/Reveal';
 import Fade from 'react-reveal/Fade';
 
 const skills = [

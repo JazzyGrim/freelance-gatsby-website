@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import Reveal from 'react-reveal/reveal';
+import Reveal from 'react-reveal/Reveal';
 import * as styles from "../styles/skillbar.module.css";
 
 export default function SkillBar( props ) {
