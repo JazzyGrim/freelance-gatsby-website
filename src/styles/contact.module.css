@@ -1,6 +1,6 @@
 h1 {
     font-size: 32px;
-    font-family: 'Maven Pro', sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-weight: 400;
     text-align: center;
 
@@ -30,7 +30,7 @@ form {
     
     background-color: white;
     border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.16);
+    box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.16);
 
     transform: translateX( -50% );
 }
@@ -52,7 +52,7 @@ form h2 {
     box-sizing: border-box;
     
     font-size: 28px;
-    font-family: 'Maven Pro', sans-serif;
+    font-family: 'Raleway', sans-serif;
     text-align: center;
 
     border-top-left-radius: 10px;
@@ -71,11 +71,12 @@ form input, form textarea {
     border: 0;
     outline: 0;
 
-    font-family: 'Maven Pro', sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-size: 18px;
 
     width: 100%;
     border-bottom: 1px solid var( --border-color );
+    resize: none;
 }
 
 form textarea {
@@ -97,7 +98,7 @@ form button {
     text-align: center;
 
     color: white;
-    font-family: 'Maven Pro', sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-size: 18px;
 
     background-color: var( --accent-color );

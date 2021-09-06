@@ -23,7 +23,7 @@ export default function Navbar( ) {
                 <li onClick={() => scrollTo("section[name='about']")}>O Meni</li>
                 <li onClick={() => scrollTo("section[name='contact']")}>Kontakt</li>
             </ul>
-            <button onClick={() => scrollTo("section[name='contact']")} className={ styles.navButton }>Izradite stranicu</button>
+            <button onClick={() => scrollTo("section[name='contact']")} className={ styles.navButton }>Pošaljite upit</button>
         </div>
     </nav>
 }

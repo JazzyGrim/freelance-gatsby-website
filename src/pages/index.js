@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "gatsby";
 import Layout from "../components/Layout";
 import SkillBar from "../components/SkillBar";
 import ContactForm from "../components/ContactForm";
@@ -55,13 +56,24 @@ export default function Home() {
   return <Layout>
     <main>
       <Fade bottom>
-        <h1>Stigla je nova era<br/>Web Stranica</h1>
-      </Fade>
-      <Fade bottom delay={ 1000 }>
-        <h2>Vrijeme je promjena. Mi smo ovdje<br/>samo za one dobre. Izradite modernu<br/>stranicu s kojom ste ponosni.</h2>
-      </Fade>
-      <Fade delay={ 2000 }>
-        <button onClick={() => scrollTo("section[name='contact']")}>Krenite Odmah</button>
+        <div id={ styles.titleContainer }>
+          <h3>pozdrav, ja sam</h3>
+          <h1>Mateo Sindičić</h1>
+          <Fade bottom delay={ 1000 }>
+            <h2>Mladi Web & Mobile Developer s opsesijom o <span>{ "<kodu/>" }</span></h2>
+          </Fade>
+          <div id={ styles.linksContainer }>
+            <Fade delay={ 2000 }>
+              <button onClick={() => scrollTo("section[name='about']")}>Više o meni
+              <div className={ styles.arrow } />
+              </button>
+              <Link to="https://github.com/JazzyGrim/"><img src="github.png" /></Link>
+              <Link to=""><img src="linkedin.png" /></Link>
+              <Link to=""><img src="fb.png" /></Link>
+              <Link to=""><img src="ig.png" /></Link>
+            </Fade>
+          </div>
+        </div>
       </Fade>
       <img alt="An apartment website designed by Mateo Sindičić." id={ styles.mainImage } src="/Group9-min.png" />
       <Reveal effect="revealLeft">
@@ -80,16 +92,16 @@ export default function Home() {
       </div>
       <div id={ styles.content }>
         <h2>
-          <Reveal effect="collapseCover" delay={ 1000 }>
+          <Reveal effect="collapseCover" delay={ 1000 } >
             <span className={ styles.textCover } />
           </Reveal>
           O Meni
         </h2>
         <p>
-          <Reveal effect="collapseCover" delay={ 1200 }>
+          <Reveal effect="collapseCover" delay={ 1200 } >
             <span className={ `${ styles.textCover } ${ styles.textCoverReverse }` }/>
           </Reveal>
-        Pozdrav! Ja sam Mateo Sindičić i u slobodno vrijeme dizajniram i programiram web stranice, aplikacije te video igre. Moje prvo iskustvo s programiranjem bilo je oko moje 10. godine,  što me s vremenom dovelo ovdje. Zalažem se za minimalizam i savršenstvo, a moji projekti su izravan odraz toga.
+          Zovem se Mateo Sindičić i u slobodno vrijeme dizajniram i programiram web stranice, aplikacije te video igre. Moje prvo iskustvo s programiranjem bilo je oko moje 10. godine,  što me s vremenom dovelo ovdje. Zalažem se za minimalizam i savršenstvo, a moji projekti su odraz toga.
         </p>
       </div>
     </section>

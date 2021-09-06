@@ -33,7 +33,7 @@ nav div {
 
 nav div h3 {
     font-size: 34px;
-    font-family: 'Maven Pro', sans-serif;
+    font-family: 'Allison', cursive;
 }
 
 nav div ul {
@@ -43,6 +43,8 @@ nav div ul {
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
+
+    margin-left: 1vw;
 }
 
 nav div ul li {

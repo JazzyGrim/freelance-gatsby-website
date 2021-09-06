@@ -11,35 +11,81 @@ main {
     position: relative;
 }
 
-main h1 {
+main h3 {
     margin-top: 7vh;
 
-    font-family: 'Maven Pro', sans-serif;
-    font-size: 85px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 32px;
 
-    text-align: center;
+    color: #8B8DB9;
+
+}
+
+main #titleContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+main h1 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 85px;
+    font-weight: 600;
+    text-align: left;
+
+    padding: 0;
 }
 
 main h2 {
     margin-top: 1vh;
 
-    font-family: 'Maven Pro', sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-weight: 400;
     font-size: 24px;
     line-height: 39px;
-    /*color: var( --text-secondary );*/
+}
 
-    text-align: center;
+main h2 span {
+    color: #EE0047;
+}
+
+main #linksContainer {
+    width: 100%;
+    height: 100%;
+    
+    margin-top: 2vh;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+main #linksContainer a {
+    margin-left: 1vw;
+}
+
+main #linksContainer img {
+    width: 24px;
+
+    opacity: 0.9;
+
+    transition: 200ms cubic-bezier(0.175, 0.885, 0.32, 1);
+}
+
+main #linksContainer img:hover {
+    transform: scale( 125% );
 }
 
 main button {
     outline: none;
     border: none;
-    
-    margin-top: 2vh;
+
+    margin-right: auto;
     padding: 15px 30px;
     
-    font-family: 'Maven Pro', sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-weight: 400;
     font-size: 24px;
 
@@ -47,12 +93,52 @@ main button {
     background-color: var( --accent-color );
     border-radius: 30px;
 
+    position: relative;
+
     cursor: pointer;
 }
 
-main img {
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.16);
+@keyframes bounce {
+    from { transform: translateX( -50% ) translateY( 0 ) rotate( 90deg ); }
+    to { transform: translateX( -50% ) translateY( 100% ) rotate( 90deg ); }
 }
+
+.arrow {
+    background: var( --accent-color );
+    height: 3px;
+    width: 30px;
+    margin: 0 auto;
+    position: relative;
+    cursor: pointer;
+    
+    position: absolute;
+    left: 20%;
+    bottom: 0%;
+
+    animation: bounce 500ms ease-in-out infinite alternate-reverse;
+    
+  }
+
+  .arrow:before,
+    .arrow:after {
+      content: "";
+      background: var( --accent-color );
+      position: absolute;
+      height: 3px;
+      width: 15px;
+    }
+  
+    .arrow:before {
+      right: -4px;
+      bottom: -4px;
+      transform: rotate(-45deg);
+    }
+  
+    .arrow:after {
+      right: -4px;
+      top: -4px;
+      transform: rotate(45deg);
+    }
 
 #mainImage {
     position: absolute;
@@ -61,6 +147,7 @@ main img {
     width: 40vw;
 
     transform: translateX( -50% );
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.16);
 }
 
 #imageLeft {
@@ -70,6 +157,7 @@ main img {
     width: 13vw;
 
     transform: translateX( -220% );
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.16);
 }
 
 #imageRightOne {
@@ -78,6 +166,7 @@ main img {
     width: 20vw;
 
     transform: translateX( 125% );
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.16);
 }
 
 #imageRightTwo {
@@ -86,6 +175,7 @@ main img {
     width: 14vw;
 
     transform: translateX( 210% );
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.16);
 }
 
 #aboutSection {
@@ -143,6 +233,7 @@ main img {
     bottom: 0;
 
     transform-origin: 100% 0;
+    opacity: 1 !important;
 
     background-color: black;
     z-index: 5;
@@ -154,7 +245,7 @@ main img {
 
 #aboutSection h2, #skillsSection h2 {
     position: relative;
-    font-family: 'Maven Pro', sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-size: 46px;
 
     margin: 1vh 0;
@@ -166,6 +257,9 @@ main img {
     font-family: 'Poppins', sans-serif;
     font-size: 22px;
     line-height: 33px;
+
+    text-align: justify;
+    text-justify: inter-word;
 }
 
 #skillsSection {
@@ -178,8 +272,8 @@ main img {
     justify-content: center;
     align-items: center;
 
+    opacity: 1 !important;
     position: relative;
-
 }
 
 #skillsSection h2 {
@@ -230,12 +324,12 @@ main img {
     align-items: flex-start;
 
     margin-left: auto;
-    background-color: var( --light-accent );
+    background-color: var( --accent-color );
 }
 
 #contactSection #infoContainer h3 {
     color: white;
-    font-family: 'Maven Pro', sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-size: 22px;
 }
 
@@ -257,12 +351,12 @@ main img {
 }
 
 #contactSection #staticInfo h2 {
-    font-family: 'Maven Pro', sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-size: 46px;
 }
 
 #contactSection #staticInfo h3 {
-    font-family: 'Maven Pro', sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-size: 22px;
     line-height: 33px;
     color: var( --text-secondary );
@@ -291,7 +385,7 @@ footer {
 }
 
 footer h3 {
-    font-family: 'Maven Pro', sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-weight: 400;
     font-size: 22px;
 }
@@ -307,7 +401,7 @@ footer h4 {
     main {
         padding: 0 5%;
         box-sizing: border-box;
-        min-height: 700px;
+        min-height: 600px;
     }
 
     main h1 {
@@ -320,6 +414,8 @@ footer h4 {
     }
     
     #mainImage {
+        position: relative;
+        margin-top: auto;
         width: 90vw;
     }
     
@@ -346,7 +442,24 @@ footer h4 {
     
         transform: translateX( 0 );
     }
+
+    main button {
+        padding: 10px 20px;
+        font-size: 20px;
+    }
     
+    main #linksContainer a {
+        margin-left: 2vw;
+    }
+    
+    main #linksContainer img {
+        width: 30px;
+    }
+    
+    main .arrow {
+
+    }
+
     #aboutSection {
         flex-direction: column-reverse;
     }
@@ -362,6 +475,7 @@ footer h4 {
     
     #aboutSection img {
         width: 75vw;
+        height: 75vw;
     
         transform: translateX( 0% ) translateY( 0% );
     }
@@ -420,12 +534,12 @@ footer h4 {
     }
     
     #contactSection #staticInfo h2 {
-        font-family: 'Maven Pro', sans-serif;
+        font-family: 'Raleway', sans-serif;
         font-size: 36px;
     }
     
     #contactSection #staticInfo h3 {
-        font-family: 'Maven Pro', sans-serif;
+        font-family: 'Raleway', sans-serif;
         font-size: 20px;
         line-height: 30px;
         color: var( --text-secondary );
