@@ -54,6 +54,7 @@ export default function Home() {
             placeholder="blurred"
             quality={100}
             className={aboutStyles.aboutImage}
+            imgClassName={aboutStyles.rounded}
           />
         </div>
         <div id={aboutStyles.content}>

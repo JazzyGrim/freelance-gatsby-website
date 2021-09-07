@@ -45,6 +45,16 @@
 
 .aboutImage {
   width: 20vw;
+  -moz-border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -khtml-border-radius: 100%;
+  border-radius: 100%;
+}
+
+.rounded {
+  -moz-border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -khtml-border-radius: 100%;
   border-radius: 100%;
 }
 
@@ -90,6 +100,7 @@
     flex-grow: 1.5;
     padding: 0;
     margin: 0 auto 7vh auto;
+    border-radius: 100%;
   }
 
   .imageShadow {

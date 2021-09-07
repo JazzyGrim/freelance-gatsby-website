@@ -29,9 +29,15 @@ body {
 
 @keyframes collapseCover {
   from {
+    -webkit-transform: scaleX(100%);
+    -moz-transform: scaleX(100%);
+    -khtml-transform: scaleX(100%);
     transform: scaleX(100%);
   }
   to {
+    -webkit-transform: scaleX(0%);
+    -moz-transform: scaleX(0%);
+    -khtml-transform: scaleX(0%);
     transform: scaleX(0%);
   }
 }
