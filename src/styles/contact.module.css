@@ -5,7 +5,7 @@ h1 {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   color: var(--accent-color);
-  font-family: "Raleway", sans-serif;
+  font-family: var(--text-font);
   font-size: 32px;
   font-weight: 400;
   text-align: center;
@@ -45,16 +45,17 @@ form h2 {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   box-shadow: 0 8px 8px rgba(0, 0, 0, 0.05);
-  font-family: "Raleway", sans-serif;
+  font-family: var(--text-font);
   font-size: 24px;
   text-align: center;
 }
 
 form label {
-  margin: 2vh 0 0.5vh 0;
+  margin: 2vh 0 1vh 0;
   color: var(--accent-color);
-  font-family: "Poppins", sans-serif;
+  font-family: var(--text-font);
   font-size: 20px;
+  font-weight: 500;
 }
 
 form input,
@@ -62,7 +63,7 @@ form textarea {
   width: 100%;
   border: 0;
   border-bottom: 1px solid var(--border-color);
-  font-family: "Raleway", sans-serif;
+  font-family: var(--text-font);
   font-size: 18px;
   outline: 0;
   resize: none;
@@ -80,12 +81,12 @@ form button {
   box-sizing: border-box;
   padding: 1vh 1vw;
   border: 0;
-  margin-top: 2vh;
+  margin: 2vh 0 0 0;
   background-color: var(--accent-color);
   border-radius: 3px;
   color: white;
   cursor: pointer;
-  font-family: "Raleway", sans-serif;
+  font-family: var(--text-font);
   font-size: 18px;
   outline: 0;
   text-align: center;

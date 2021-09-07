@@ -9,13 +9,13 @@ footer {
 }
 
 footer h3 {
-  font-family: "Raleway", sans-serif;
+  font-family: var(--text-font);
   font-size: 18px;
   font-weight: 400;
 }
 
 footer h4 {
-  font-family: "Poppins", sans-serif;
+  font-family: var(--text-font);
   font-size: 16px;
   font-weight: 400;
 }
@@ -33,7 +33,7 @@ footer h4 {
   }
 
   footer h4 {
-    font-family: "Poppins", sans-serif;
+    font-family: var(--text-font);
     font-size: 14px;
     font-weight: 400;
     text-align: center;

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Allison&family=Raleway:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,700;1,700&family=Allison&family=Raleway:wght@400;500;700&display=swap");
 
 * {
   padding: 0;
@@ -21,6 +21,8 @@ body {
   --accent-dark: #e28413;
   --dark-background: #000022;
   --dark-background-alt: #2d304e;
+  --header-font: "Arvo", serif;
+  --text-font: "Raleway", sans-serif;
 }
 
 /* ANIMATIONS */
@@ -58,10 +60,10 @@ body {
 .area {
   position: absolute;
   top: 0;
-  left: 10%;
+  left: 70%;
   overflow: visible;
   width: 200px;
-  height: 500px;
+  height: 600px;
   animation: swing 1s infinite ease-in-out alternate;
   transform: translateX(0);
   -moz-transform-origin: top;
@@ -73,7 +75,7 @@ body {
   position: relative;
   left: 98px;
   width: 4px;
-  height: 200px;
+  height: 300px;
   background-color: rgba(255, 255, 255, 0.5);
 }
 
@@ -160,4 +162,10 @@ body {
   animation-duration: 3s;
   animation-fill-mode: both;
   animation-timing-function: cubic-bezier(0.26, 0.86, 0.6, 1);
+}
+
+@media only screen and (max-width: 600px) {
+  .area {
+    left: 10%;
+  }
 }

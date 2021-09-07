@@ -22,7 +22,7 @@ export default function ContactForm() {
           <h2>Stupite u kontakt</h2>
         )}
         <div id={styles.formContent}>
-          <label htmlFor="email">email</label>
+          <label htmlFor="email">e-mail</label>
           <input
             id={styles.email}
             type="email"

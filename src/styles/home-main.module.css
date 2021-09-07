@@ -10,9 +10,9 @@ main {
 }
 
 main h3 {
-  margin-top: 7vh;
+  margin: 7vh 0 0 0;
   color: #8b8db9;
-  font-family: "Raleway", sans-serif;
+  font-family: var(--text-font);
   font-size: 32px;
   font-weight: 400;
 }
@@ -26,15 +26,15 @@ main #titleContainer {
 
 main h1 {
   padding: 0;
-  font-family: "Raleway", sans-serif;
+  font-family: var(--text-font);
   font-size: 85px;
   font-weight: 600;
   text-align: left;
 }
 
 main h2 {
-  margin-top: 1vh;
-  font-family: "Raleway", sans-serif;
+  margin: 1vh 0 0 0;
+  font-family: var(--text-font);
   font-size: 24px;
   font-weight: 400;
   line-height: 39px;
@@ -50,11 +50,11 @@ main #linksContainer {
   height: 100%;
   align-items: center;
   justify-content: flex-start;
-  margin-top: 2vh;
+  margin: 2vh 0 0 0;
 }
 
 main #linksContainer a {
-  margin-left: 1vw;
+  margin: 0 0 0 1vw;
 }
 
 main #linksContainer img {
@@ -69,14 +69,14 @@ main #linksContainer img:hover {
 
 main button {
   position: relative;
-  padding: 15px 30px;
+  padding: 10px 30px;
   border: none;
-  margin-right: auto;
+  margin: 0 auto 0 0;
   background-color: var(--accent-color);
   border-radius: 30px;
   color: white;
   cursor: pointer;
-  font-family: "Raleway", sans-serif;
+  font-family: var(--text-font);
   font-size: 24px;
   font-weight: 400;
   outline: none;
@@ -163,7 +163,7 @@ main button {
   .mainImage {
     position: relative;
     width: 90vw;
-    margin-top: auto;
+    margin: auto 0 0 0;
   }
 
   .imageLeft {
@@ -193,11 +193,17 @@ main button {
   }
 
   main #linksContainer a {
-    margin-left: 2vw;
+    margin: 0 0 0 2vw;
   }
 
   main #linksContainer img {
     width: 30px;
+  }
+}
+
+@media only screen and (max-width: 330px) {
+  main button {
+    font-size: 16px;
   }
 }
 

@@ -84,31 +84,59 @@
     flex-direction: column-reverse;
   }
 
-  #about #blueBox {
-    width: 100%;
-    box-sizing: border-box;
-    flex-direction: column;
-    padding: 0 2vw;
+  #about #imageContainer {
+    display: block;
+    width: 60vw;
+    flex-grow: 1.5;
+    padding: 0;
+    margin: 0 auto 7vh auto;
   }
 
-  #about .aboutImage {
-    transform: translateX(0%) translateY(-50%);
+  .imageShadow {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 60vw;
+    height: 60vw;
+  }
+
+  #shOne {
+    top: 2vh;
+    right: 0;
+    bottom: 0;
+  }
+
+  #shTwo {
+    top: 4vh;
+    right: 0;
+    bottom: 0;
+  }
+
+  #shThree {
+    top: 6vh;
+    right: 0;
+    bottom: 0;
+  }
+
+  .aboutImage {
+    width: 100%;
   }
 
   #about #content {
     width: 100%;
     min-height: auto;
     padding: 5% 5%;
-    margin-bottom: 40vw;
+    margin: 0 0 2vh 0;
   }
 
   #about h2,
-  #skillsSection h2 {
+  #skills h2 {
     font-size: 40px;
   }
 
   #about p,
-  #skillsSection p {
+  #skills p {
     font-size: 18px;
     line-height: 29px;
   }

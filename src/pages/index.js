@@ -91,12 +91,18 @@ export default function Home() {
             OpenGL, GLSL ), dodatke za video igre ( Java )."
             />
             <div id={skillsStyles.gridView}>
-              <div className={skillsStyles.gridContainer}>
+              <div
+                className={skillsStyles.gridContainer}
+                style={{ marginRight: "1vw" }}
+              >
                 {skills.slice(0, 5).map(skill => (
                   <SkillBar name={skill.name} percentage={skill.percentage} />
                 ))}
               </div>
-              <div className={skillsStyles.gridContainer}>
+              <div
+                className={skillsStyles.gridContainer}
+                style={{ marginLeft: "1vw" }}
+              >
                 {skills.slice(5, 10).map(skill => (
                   <SkillBar name={skill.name} percentage={skill.percentage} />
                 ))}
