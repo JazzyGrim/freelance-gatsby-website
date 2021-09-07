@@ -19,17 +19,25 @@
   border: 3px solid #2d304e;
   margin: 0.5vh 0 0 0;
   background-color: rgba(155, 155, 155, 0.16);
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -khtml-border-radius: 20px;
   border-radius: 20px;
   box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.3);
 }
 
 .skillContainer .skillBar .skillBarFiller {
+  overflow: hidden;
   height: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -khtml-border-radius: 20px;
   border-radius: 20px;
 }
 
 .skillContainer .skillBar .skillBarFiller .progressBar {
   position: relative;
+  overflow: hidden;
   height: 20px;
   background: rgb(190, 58, 38);
   background: linear-gradient(
@@ -37,6 +45,9 @@
     rgba(190, 58, 38, 1) 0%,
     rgb(255, 255, 255) 90%
   );
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -khtml-border-radius: 20px;
   border-radius: 20px;
 }
 
@@ -44,6 +55,7 @@
   position: absolute;
   top: 0;
   right: 0;
+  overflow: hidden;
   width: 20px;
   height: 20px;
   background-color: white;
