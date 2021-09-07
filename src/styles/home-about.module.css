@@ -1,0 +1,115 @@
+#about {
+  position: relative;
+  display: flex;
+  width: 100%;
+  align-content: stretch;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#about #imageContainer {
+  position: relative;
+  display: flex;
+  width: auto;
+  box-sizing: border-box;
+  flex-direction: row;
+  flex-grow: 1.5;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 10vh 0;
+}
+
+.imageShadow {
+  position: absolute;
+  top: 10vh;
+  width: 20vw;
+  height: 20vw;
+  background-color: #1900ff;
+  border-radius: 100%;
+}
+
+#shOne {
+  right: 1vw;
+  opacity: 0.3;
+}
+
+#shTwo {
+  right: 2vw;
+  opacity: 0.2;
+}
+
+#shThree {
+  right: 3vw;
+  opacity: 0.1;
+}
+
+.aboutImage {
+  width: 20vw;
+  border-radius: 100%;
+}
+
+#about #content {
+  display: flex;
+  width: auto;
+  box-sizing: border-box;
+  flex-direction: column;
+  flex-grow: 2;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 3vh 5vw 3vh 5vw;
+}
+
+#content p {
+  max-width: 600px;
+}
+
+.textCover {
+  position: absolute;
+  z-index: 5;
+  top: 0;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  background-color: black;
+  opacity: 1 !important;
+  transform-origin: 100% 0;
+}
+
+.textCoverReverse {
+  transform-origin: 0% 0;
+}
+
+@media only screen and (max-width: 600px) {
+  #about {
+    flex-direction: column-reverse;
+  }
+
+  #about #blueBox {
+    width: 100%;
+    box-sizing: border-box;
+    flex-direction: column;
+    padding: 0 2vw;
+  }
+
+  #about .aboutImage {
+    transform: translateX(0%) translateY(-50%);
+  }
+
+  #about #content {
+    width: 100%;
+    min-height: auto;
+    padding: 5% 5%;
+    margin-bottom: 40vw;
+  }
+
+  #about h2,
+  #skillsSection h2 {
+    font-size: 40px;
+  }
+
+  #about p,
+  #skillsSection p {
+    font-size: 18px;
+    line-height: 29px;
+  }
+}

@@ -1,0 +1,211 @@
+main {
+  position: relative;
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 5%;
+}
+
+main h3 {
+  margin-top: 7vh;
+  color: #8b8db9;
+  font-family: "Raleway", sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+}
+
+main #titleContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+main h1 {
+  padding: 0;
+  font-family: "Raleway", sans-serif;
+  font-size: 85px;
+  font-weight: 600;
+  text-align: left;
+}
+
+main h2 {
+  margin-top: 1vh;
+  font-family: "Raleway", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 39px;
+}
+
+main h2 span {
+  color: #ee0047;
+}
+
+main #linksContainer {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 2vh;
+}
+
+main #linksContainer a {
+  margin-left: 1vw;
+}
+
+main #linksContainer img {
+  width: 24px;
+  opacity: 0.9;
+  transition: 200ms cubic-bezier(0.175, 0.885, 0.32, 1);
+}
+
+main #linksContainer img:hover {
+  transform: scale(125%);
+}
+
+main button {
+  position: relative;
+  padding: 15px 30px;
+  border: none;
+  margin-right: auto;
+  background-color: var(--accent-color);
+  border-radius: 30px;
+  color: white;
+  cursor: pointer;
+  font-family: "Raleway", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  outline: none;
+}
+
+.arrow {
+  position: absolute;
+  bottom: 0%;
+  left: 20%;
+  width: 30px;
+  height: 3px;
+  margin: 0 auto;
+  animation: bounce 500ms ease-in-out infinite alternate-reverse;
+  background: var(--accent-color);
+  cursor: pointer;
+}
+
+.arrow::before,
+.arrow::after {
+  position: absolute;
+  width: 15px;
+  height: 3px;
+  background: var(--accent-color);
+  content: "";
+}
+
+.arrow::before {
+  right: -4px;
+  bottom: -5px;
+  transform: rotate(-45deg);
+}
+
+.arrow::after {
+  top: -5px;
+  right: -4px;
+  transform: rotate(45deg);
+}
+
+.mainImage {
+  width: 50vw;
+  margin: 10vh 0 0 0;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.16);
+}
+
+.imageLeft {
+  position: absolute !important;
+  bottom: 7vh;
+  width: 13vw;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.16);
+  transform: translateX(-220%);
+}
+
+.imageRightOne {
+  position: absolute !important;
+  bottom: 5vh;
+  width: 20vw;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.16);
+  transform: translateX(120%);
+}
+
+.imageRightTwo {
+  position: absolute !important;
+  bottom: 20vh;
+  width: 14vw;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.16);
+  transform: translateX(210%);
+}
+
+@media only screen and (max-width: 600px) {
+  main {
+    min-height: 600px;
+    box-sizing: border-box;
+  }
+
+  main h1 {
+    font-size: 50px;
+  }
+
+  main h2 {
+    font-size: 20px;
+    line-height: 35px;
+  }
+
+  .mainImage {
+    position: relative;
+    width: 90vw;
+    margin-top: auto;
+  }
+
+  .imageLeft {
+    bottom: 3vh;
+    left: 2%;
+    width: 20vw;
+    transform: translateX(0);
+  }
+
+  .imageRightOne {
+    bottom: 5vh;
+    left: 70%;
+    width: 30vw;
+    transform: translateX(0);
+  }
+
+  .imageRightTwo {
+    bottom: 12vh;
+    left: 78%;
+    width: 20vw;
+    transform: translateX(0);
+  }
+
+  main button {
+    padding: 10px 20px;
+    font-size: 20px;
+  }
+
+  main #linksContainer a {
+    margin-left: 2vw;
+  }
+
+  main #linksContainer img {
+    width: 30px;
+  }
+}
+
+@keyframes bounce {
+  from {
+    transform: translateX(-50%) translateY(0) rotate(90deg);
+  }
+  to {
+    transform: translateX(-50%) translateY(100%) rotate(90deg);
+  }
+}

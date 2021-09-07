@@ -1,185 +1,163 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Allison&family=Raleway:wght@400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Allison&family=Raleway:wght@400;500;700&display=swap");
 
 * {
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
 }
 
 body {
-    width: 100vw;
-    overflow-x: hidden;
+  width: 100vw;
+  overflow-x: hidden;
 }
 
 :root {
-    --accent-color: #116DFF;
-    --text-secondary: #2F2F2F;
-    --dark-accent: #14348E;
-    --light-accent: #08A4BD;
-    --border-color: #C9C9C9;
-    --label-color: #878787;
+  --accent-color: #116dff;
+  --text-secondary: #2f2f2f;
+  --dark-accent: #14348e;
+  --light-accent: #08a4bd;
+  --border-color: #c9c9c9;
+  --label-color: #878787;
+  --accent-dark: #e28413;
+  --dark-background: #000022;
+  --dark-background-alt: #2d304e;
 }
 
 /* ANIMATIONS */
-@keyframes revealLeft {
-    from { transform: translateX( -150% ); opacity: 0; }
-    to { transform: translateX( -220% ); opacity: 1; }
-}
-
-.revealLeft {
-    animation-name: revealLeft;
-}
-
-@keyframes revealRightOne {
-    from { transform: translateX( 55% ); opacity: 0; }
-    to { transform: translateX( 125% ); opacity: 1; }
-}
-
-.revealRightOne {
-    animation-name: revealRightOne;
-}
-
-@keyframes revealRightTwo {
-    from { transform: translateX( 140% ); opacity: 0; }
-    to { transform: translateX( 210% ); opacity: 1; }
-}
-
-.revealRightTwo {
-    animation-name: revealRightTwo;
-}
 
 @keyframes collapseCover {
-    from { transform: scaleX( 100% ); }
-    to { transform: scaleX( 0% ); }
+  from {
+    transform: scaleX(100%);
+  }
+  to {
+    transform: scaleX(0%);
+  }
 }
 
 .collapseCover {
-    animation-name: collapseCover;
-    animation-timing-function: cubic-bezier(.14,.54,.6,1);
-    animation-fill-mode: both;
+  animation-fill-mode: both;
+  animation-name: collapseCover;
+  animation-timing-function: cubic-bezier(0.14, 0.54, 0.6, 1);
 }
 
 @keyframes lightsOut {
-    from { background-color: white; color: black; }
-    to { background-color: black; color: white; }
-}
-
-@keyframes lightsIn {
-    from { background-color: red; color: black; }
-    to { background-color: red; color: red; }
+  from {
+    background-color: white;
+  }
+  to {
+    background-color: #000022;
+  }
 }
 
 .lightsOut {
-    animation-name: lightsOut;
-    animation-timing-function: cubic-bezier(.14,.54,.6,1);
-    animation-fill-mode: forwards;
-}
-
-.lightsIn {
-    animation-name: lightsIn;
-    animation-timing-function: cubic-bezier(.14,.54,.6,1);
-    animation-fill-mode: forwards;
-    animation-direction: reverse;
+  animation-fill-mode: forwards;
+  animation-name: lightsOut;
+  animation-timing-function: cubic-bezier(0.14, 0.54, 0.6, 1);
 }
 
 .area {
-    position: absolute;
-    left: 10%;
-    top: 0;
-    transform: translateX( 0 );
-
-    width: 200px;
-    height: 500px;
-    animation: swing 1s infinite ease-in-out alternate;
-    transform-origin: top;
-    -moz-transform-origin: top;
-    -webkit-transform-origin: top;
+  position: absolute;
+  top: 0;
+  left: 10%;
+  overflow: visible;
+  width: 200px;
+  height: 500px;
+  animation: swing 1s infinite ease-in-out alternate;
+  transform: translateX(0);
+  -moz-transform-origin: top;
+  -webkit-transform-origin: top;
+  transform-origin: top;
 }
 
 .wire {
-    position: relative;
-    left: 98px;
-    height: 200px;
-    width: 4px;
-    background-color: rgba( 255, 255, 255, 0.5);
+  position: relative;
+  left: 98px;
+  width: 4px;
+  height: 200px;
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 .fixture {
-    position: relative;
-    background-color: grey;
-    width: 16px;
-    height: 20px;
-    left: 92px;
+  position: relative;
+  left: 92px;
+  width: 16px;
+  height: 20px;
+  background-color: grey;
 }
 
 .strip {
-    position: relative;
-    width: 18px;
-    height: 2px;
-    right: 1px;
-    top: 4px;
-    background-color: darkgrey;
+  position: relative;
+  top: 4px;
+  right: 1px;
+  width: 18px;
+  height: 2px;
+  background-color: darkgrey;
 }
 
 .strip:nth-of-type(2) {
-    top: 7px;
+  top: 7px;
 }
 
 .strip:nth-of-type(3) {
-    top: 10px;
+  top: 10px;
 }
 
 .bulb {
-    position: relative;
-    width: 40px;
-    height: 40px;
-    left: 80px;
-    bottom: 2px;
-    z-index: 2;
-    background-color: rgba(226, 211, 161, 0.85);
-    border-radius: 50%;
-    -webkit-box-shadow: 0px 0px 300px 77px rgba(235, 209, 164, 1);
-    -moz-box-shadow: 0px 0px 300px 77px rgba(235, 209, 164, 1);
-    box-shadow: 0px 0px 300px 77px rgba(235, 209, 164, 1);
+  position: relative;
+  z-index: 2;
+  bottom: 2px;
+  left: 80px;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(226, 211, 161, 0.85);
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 300px 77px rgba(235, 209, 164, 1);
+  -moz-box-shadow: 0 0 300px 77px rgba(235, 209, 164, 1);
+  box-shadow: 0 0 300px 77px rgba(235, 209, 164, 1);
 }
 
 .zig {
-    position: relative;
-    background-color: transparent;
-    width: 10px;
-    height: 5px;
-    border-radius: 5px / 2.5px;
-    left: 14px;
-    border: black solid 1px;
+  position: relative;
+  left: 14px;
+  width: 10px;
+  height: 5px;
+  border: black solid 1px;
+  background-color: transparent;
+  border-radius: 5px / 2.5px;
 }
 
 .zig:nth-of-type(2) {
-    top: -3px;
+  top: -3px;
 }
 
 .zig:nth-of-type(3) {
-    top: -6px;
+  top: -6px;
 }
 
 @keyframes swing {
-    from {
-        -moz-transform: rotate(3deg);
-        -webkit-transform: rotate(3deg);
-        transform: rotate(3deg);
-    }
-    to {
-        transform: rotate(-3deg);
-    }
+  from {
+    -moz-transform: rotate(3deg);
+    -webkit-transform: rotate(3deg);
+    transform: rotate(3deg);
+  }
+
+  to {
+    transform: rotate(-3deg);
+  }
 }
 
 @keyframes progress {
-    0% { width: 0; }
-    100% { width: 100%; }
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
 }
 
 .progress {
-    animation: progress;
-    animation-duration: 3s;
-    animation-timing-function: cubic-bezier( .26, .86, .6, 1 );
-    animation-fill-mode: both;
+  animation: progress;
+  animation-duration: 3s;
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(0.26, 0.86, 0.6, 1);
 }

@@ -1,65 +1,58 @@
 .skillContainer {
-    width: 100%;
-    margin: 1vh 0;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 1vh 0;
 }
 
 .skillContainer h4 {
-    font-family: 'Raleway', sans-serif;
-    font-size: 20px;
+  font-family: "Raleway", sans-serif;
+  font-size: 20px;
 }
 
 .skillContainer .skillBar {
-    margin-top: 0.5vh;
-
-    width: 100%;
-    height: 20px;
-
-    background-color: rgba(155, 155, 155, 0.16);
-    border: 3px solid #222;
-    box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.3);
-    border-radius: 20px;
-    
-    overflow: hidden;
+  overflow: hidden;
+  width: 100%;
+  height: 20px;
+  border: 3px solid #2d304e;
+  margin-top: 0.5vh;
+  background-color: rgba(155, 155, 155, 0.16);
+  border-radius: 20px;
+  box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.3);
 }
 
 .skillContainer .skillBar .skillBarFiller {
-    height: 20px;
-
-    border-radius: 20px;
-    
+  height: 20px;
+  border-radius: 20px;
 }
 
 .skillContainer .skillBar .skillBarFiller .progressBar {
-    height: 20px;
-
-
-    background: rgb(190,58,38);
-    background: linear-gradient(40deg, rgba(190,58,38,1) 0%, rgba(231,178,96,1) 100%);
-    border-radius: 20px;
-    
-    position: relative;
+  position: relative;
+  height: 20px;
+  background: rgb(190, 58, 38);
+  background: linear-gradient(
+    40deg,
+    rgba(190, 58, 38, 1) 0%,
+    rgba(231, 178, 96, 1) 100%
+  );
+  border-radius: 20px;
 }
 
 .skillContainer .skillBar .skillBarFiller .progressHead {
-    width: 20px;
-    height: 20px;
-    position: absolute;
-    right: 0;
-    top: 0;
-
-    border-radius: 100%;
-    background-color: white;
-    box-shadow: 0 0 30px 10px rgba(255, 255, 255, 0.5);
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 100%;
+  box-shadow: 0 0 30px 10px rgba(255, 255, 255, 0.5);
 }
 
-
 @media only screen and (max-width: 600px) {
-    .skillContainer h4 {
-        font-size: 3.5vw;
-    }
+  .skillContainer h4 {
+    font-size: 3.5vw;
+  }
 }

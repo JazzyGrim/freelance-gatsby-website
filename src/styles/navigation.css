@@ -1,0 +1,73 @@
+nav {
+  position: sticky;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100vw;
+  height: 80px;
+  box-sizing: border-box;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 0 5%;
+  background-color: white;
+  transition: box-shadow 200ms ease;
+}
+
+.navShadow {
+  box-shadow: 0 4px 10px rgba(138, 138, 138, 0.16);
+}
+
+nav div {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+#navLogo {
+  font-family: "Allison", cursive;
+  font-size: 34px;
+}
+
+#navList {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  margin-left: 1vw;
+  list-style-type: none;
+}
+
+.navListitem {
+  margin-left: 2vw;
+  color: var(--text-secondary);
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+}
+
+#navButton {
+  padding: 5px 15px;
+  border: 1px solid var(--accent-color);
+  margin-left: auto;
+  background-color: white;
+  border-radius: 20px;
+  color: var(--accent-color);
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+@media only screen and (max-width: 600px) {
+  #navList {
+    display: none;
+  }
+
+  #navButton {
+    font-size: 18px;
+  }
+}

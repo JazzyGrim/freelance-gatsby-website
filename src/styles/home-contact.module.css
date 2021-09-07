@@ -1,0 +1,100 @@
+#contact {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#contact #infoContainer {
+  display: flex;
+  width: 50vw;
+  box-sizing: border-box;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0 3vw;
+  border-left: 1px solid var(--border-color);
+
+  margin: 5vh 0;
+}
+
+#contact #infoContainer h3 {
+  color: white;
+  font-family: "Raleway", sans-serif;
+  font-size: 22px;
+}
+
+#contact #infoContainer h5 {
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+#contact #staticInfo {
+  display: flex;
+  width: 50vw;
+  box-sizing: border-box;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 0 3vw;
+}
+
+#contact #staticInfo h2 {
+  font-family: "Raleway", sans-serif;
+  font-size: 46px;
+}
+
+#contact #staticInfo h3 {
+  color: var(--text-secondary);
+  font-family: "Raleway", sans-serif;
+  font-size: 22px;
+  line-height: 33px;
+}
+
+#contact #staticInfo a {
+  color: var(--accent-color);
+  font-family: "Poppins", sans-serif;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 33px;
+}
+
+@media only screen and (max-width: 600px) {
+  #contact {
+    flex-direction: column-reverse;
+  }
+
+  #contact #infoContainer {
+    width: 100vw;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 5vh 0;
+    margin: 0;
+  }
+
+  #contact #staticInfo {
+    width: 80vw;
+    margin: 2vh 0;
+  }
+
+  #contact #staticInfo h2 {
+    font-family: "Raleway", sans-serif;
+    font-size: 36px;
+  }
+
+  #contact #staticInfo h3 {
+    color: var(--text-secondary);
+    font-family: "Raleway", sans-serif;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  #contact #staticInfo a {
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+  }
+}

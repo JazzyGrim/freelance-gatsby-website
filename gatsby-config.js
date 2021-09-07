@@ -6,5 +6,10 @@
 
 module.exports = {
   /* Your site config here */
-  plugins: [ `gatsby-plugin-smoothscroll`, `gatsby-plugin-react-helmet` ],
-}
+  plugins: [
+    `gatsby-plugin-smoothscroll`,
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
+  ],
+};

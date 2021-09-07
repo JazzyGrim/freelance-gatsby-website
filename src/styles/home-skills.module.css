@@ -1,0 +1,69 @@
+#skills {
+  position: relative;
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5vh 0;
+  color: #ffffff;
+  opacity: 1 !important;
+}
+
+#skillContainer {
+  display: flex;
+  max-width: 700px;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+#skills h2 {
+  color: var(--accent-dark);
+  text-align: center;
+}
+
+#skills p {
+  margin: 1vh 0 3vh 0;
+  font-size: 18px;
+  text-align: justify;
+}
+
+#skills #gridView {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+#skills #gridView .gridContainer {
+  display: flex;
+  width: 20vw;
+  min-width: 300px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 2vw;
+}
+
+@media only screen and (max-width: 600px) {
+  #skills {
+    width: 100%;
+    padding: 5% 5%;
+  }
+
+  #skills #gridView {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #skills #gridView .gridContainer {
+    width: 40vw;
+    min-width: auto;
+  }
+}

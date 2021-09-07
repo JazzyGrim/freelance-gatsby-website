@@ -1,134 +1,116 @@
 h1 {
-    font-size: 32px;
-    font-family: 'Raleway', sans-serif;
-    font-weight: 400;
-    text-align: center;
-
-    color: var( --accent-color );
-    background-color: white;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-
-    padding: 1vh 1vw;
-    box-sizing: border-box;
-
+  box-sizing: border-box;
+  padding: 1vh 1vw;
+  background-color: white;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  color: var(--accent-color);
+  font-family: "Raleway", sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  text-align: center;
 }
 
 #successMessage {
-    color: var( --accent-color );
-    font-weight: 400;
+  color: var(--accent-color);
+  font-weight: 400;
 }
 
 form {
-    width: 20vw;
-    min-width: 400px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.16);
-
-    transform: translateX( -50% );
+  display: flex;
+  width: 20vw;
+  min-width: 400px;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  background-color: white;
+  border-radius: 3px;
+  box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.16);
 }
 
 #formContent {
-    width: 100%;
-    padding: 1vh 1vw;
-    box-sizing: border-box;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 1vh 1vw;
 }
 
 form h2 {
-    width: 100%;
-    padding: 1vh 1vw;
-    box-sizing: border-box;
-    
-    font-size: 28px;
-    font-family: 'Raleway', sans-serif;
-    text-align: center;
-
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  box-sizing: border-box;
+  padding: 2vh 1vw;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.05);
+  font-family: "Raleway", sans-serif;
+  font-size: 24px;
+  text-align: center;
 }
 
 form label {
-    font-family: 'Poppins', sans-serif;
-    font-size: 20px;
-    margin: 2vh 0 0.5vh 0;
-    color: var( --label-color );
+  margin: 2vh 0 0.5vh 0;
+  color: var(--accent-color);
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
 }
 
-form input, form textarea {
-    border: 0;
-    outline: 0;
-
-    font-family: 'Raleway', sans-serif;
-    font-size: 18px;
-
-    width: 100%;
-    border-bottom: 1px solid var( --border-color );
-    resize: none;
+form input,
+form textarea {
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid var(--border-color);
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  outline: 0;
+  resize: none;
 }
 
 form textarea {
-    padding: 2%;
-    box-sizing: border-box;
-
-    border-radius: 10px;
-    border: 1px solid var( --border-color );
+  box-sizing: border-box;
+  padding: 2%;
+  border: 1px solid var(--border-color);
+  border-radius: 3px;
 }
 
 form button {
-    width: 100%;
-    border: 0;
-    outline: 0;
-
-    margin-top: 2vh;
-    padding: 1vh 1vw;
-    box-sizing: border-box;
-    text-align: center;
-
-    color: white;
-    font-family: 'Raleway', sans-serif;
-    font-size: 18px;
-
-    background-color: var( --accent-color );
-    border-radius: 15px;
-
-    cursor: pointer;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 1vh 1vw;
+  border: 0;
+  margin-top: 2vh;
+  background-color: var(--accent-color);
+  border-radius: 3px;
+  color: white;
+  cursor: pointer;
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  outline: 0;
+  text-align: center;
 }
 
-
 @media only screen and (max-width: 600px) {
-    form {
-        width: 80vw;
-        min-width: auto;
-    
-        transform: translateX( 0% );
-    }
+  form {
+    width: 80vw;
+    min-width: auto;
+    transform: translateX(0%);
+  }
 
-    #formContent {
-        padding: 1vh 3vw;
-    }
-    
-    form h2 {
-        padding: 1vh 1vw;
-    }
-    
-    form label {
-        font-size: 18px;
-    }
-    
-    form button {
-        border-radius: 10px;
-    }
+  #formContent {
+    padding: 1vh 3vw;
+  }
+
+  form h2 {
+    padding: 1vh 1vw;
+  }
+
+  form label {
+    font-size: 18px;
+  }
+
+  form button {
+    border-radius: 10px;
+  }
 }
