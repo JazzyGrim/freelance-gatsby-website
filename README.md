@@ -210,4 +210,4 @@ Project Link: [https://github.com/JazzyGrim/freelance-gatsby-website](https://gi
 
   
 
-[product-screenshot]: static/screenshot.png
+[website-screenshot]: static/screenshot.png
