@@ -60,10 +60,8 @@ export default function Home() {
         <div id={aboutStyles.content}>
           <TextContainer
             title="O Meni"
-            description="Zovem se Mateo Sindičić i u slobodno vrijeme dizajniram i
-            programiram web stranice, aplikacije te video igre. Moje prvo
-            iskustvo s programiranjem bilo je oko moje 10. godine, što me s
-            vremenom dovelo ovdje. Zalažem se za minimalizam i savršenstvo, a
+            description="Zovem se Mateo Sindičić. Završio sam Prirodoslovno-matematičku gimnaziju, a trenutno studiram Računarstvo na Tehničkom fakultetu u Rijeci. U slobodno vrijeme dizajniram i
+            programiram web stranice, aplikacije te video igre. S preko 9 godina iskustva, razvio sam sposobnosti u mnogim poljima računalnih znanosti. Zalažem se za minimalizam i savršenstvo, a
             moji projekti su odraz toga."
             titleReveal={
               <Reveal effect="collapseCover" delay={1000}>
@@ -114,10 +112,9 @@ export default function Home() {
       </Reveal>
       <section id={contactStyles.contact} name="contact">
         <div id={contactStyles.staticInfo}>
-          <h2>Direktan upit</h2>
-          <h3>email</h3>
+          <h3>e-mail</h3>
           <a href="mailto:mateo.sindicic@gmail.com">mateo.sindicic@gmail.com</a>
-          <h3>phone</h3>
+          <h3>mobitel</h3>
           <a href="tel:+38591-373-4442">+385 91 373 4442</a>
         </div>
         <div id={contactStyles.infoContainer}>
